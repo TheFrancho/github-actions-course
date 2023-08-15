@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: imprimir variables
-      - run: toJSON(vars) && toJSON(env)
+        run: toJSON(vars) && toJSON(env)
   saludo-variables:
     runs-on: ubuntu-latest
     env:

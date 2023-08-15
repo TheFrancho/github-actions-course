@@ -21,3 +21,10 @@ jobs:
         env:
           NOMBRE2: Villanos
           NOMBRE: ${{ vars.NOMBRE }}
+  burn-password:
+    runs-on: ubuntu-latest
+    env:
+      PASSW : ${{ secrets.TESTING_SECRET }}
+    steps:
+      - name: burning password
+        run: echo $PASSW

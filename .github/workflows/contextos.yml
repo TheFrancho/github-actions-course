@@ -1,6 +1,9 @@
 name: contextos
 on: push
 jobs:
+  print-ref:
+    runs-on: ubuntu-latest
+      - run : echo github.ref
   check-main:
     if: ${{ github.ref == 'ref/heads/main' || github.ref == 'ref/heads/aprendiendo-github-actions'}}
     runs-on: ubuntu-latest

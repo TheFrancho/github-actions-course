@@ -4,11 +4,13 @@ on:
 env:
   DIA_DE_SEMANA: Lunes
 jobs:
-  mostrar-varaibles:
+  mostrar-variables:
+    env:
+      VARS: ${{ toJSON(vars) }}
     runs-on: ubuntu-latest
     steps:
       - name: imprimir variables
-        run: toJSON(env)
+        run: echo $VARS
   saludo-variables:
     runs-on: ubuntu-latest
     env:

@@ -6,7 +6,7 @@ jobs:
     steps:
       - run : echo github.ref && echo "Desplegando en la rama $GITHUB_REF"
   check-main:
-    if: ${{ github.ref == 'ref/heads/main' || github.ref == 'ref/heads/aprendiendo-github-actions'}}
+    if: ${{ (github.ref == 'ref/heads/main') || (github.ref == 'ref/heads/aprendiendo-github-actions')}}
     runs-on: ubuntu-latest
     steps:
       - run : echo "Desplegando en la rama $GITHUB_REF"

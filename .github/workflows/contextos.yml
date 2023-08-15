@@ -1,0 +1,12 @@
+name: contextos
+on: push
+jobs:
+  print-ref:
+    runs-on: ubuntu-latest
+    steps:
+      - run : echo {{github.ref}} && echo "Desplegando en la rama $GITHUB_REF"
+  check-main:
+    if: ${{ (github.ref == 'refs/heads/aprendiendo-github-actions') || (github.ref == 'refs/heads/main') }}
+    runs-on: ubuntu-latest
+    steps:
+      - run : echo "Desplegando en la rama $GITHUB_REF"

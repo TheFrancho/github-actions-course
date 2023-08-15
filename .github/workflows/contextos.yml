@@ -2,7 +2,7 @@ name: contextos
 on: push
 jobs:
   check-main:
-    if: ${{ github.ref == 'ref/heads/main' }}
+    if: ${{ github.ref == 'ref/heads/main' || github.ref == 'ref/heads/aprendiendo-github-actions'}}
     runs-on: ubuntu-latest
     steps:
       - run : echo "Desplegando en la rama $GITHUB_REF"
